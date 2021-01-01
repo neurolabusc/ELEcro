@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <LRSInOutputDirectory Value="False"/>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <Title Value="ELEcro"/>
+      <Scaled Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+      <SharedMatrixOptions Count="1">
+        <Item1 ID="791768317385" Type="IDEMacro" MacroName="LCLWidgetType" Value="cocoa"/>
+      </SharedMatrixOptions>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default">
+          <local>
+            <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+          </local>
+        </Mode0>
+      </Modes>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="29">
+      <Unit0>
+        <Filename Value="ELEcro.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="eegmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="EEGMain"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1229"/>
+        <CursorPos X="5" Y="1234"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="EEGData.pas"/>
+        <CursorPos X="101" Y="6"/>
+        <UsageCount Value="11"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="units\Streams.pas"/>
+        <TopLine Value="349"/>
+        <CursorPos X="64" Y="366"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="units\BufStream.pas"/>
+        <TopLine Value="183"/>
+        <CursorPos X="9" Y="206"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="units\MemUtils.pas"/>
+        <TopLine Value="144"/>
+        <CursorPos X="19" Y="66"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="eeg_type.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos X="16" Y="9"/>
+        <UsageCount Value="15"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\lazarus\lcl\lclproc.pas"/>
+        <UnitName Value="LCLProc"/>
+        <TopLine Value="1487"/>
+        <CursorPos X="19" Y="1495"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="eegmain.lrs"/>
+        <TopLine Value="59"/>
+        <CursorPos Y="74"/>
+        <UsageCount Value="14"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="Prefs.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="20"/>
+        <CursorPos X="129" Y="23"/>
+        <UsageCount Value="14"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="userdir.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="15"/>
+        <UsageCount Value="27"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="format_all.pas"/>
+        <CursorPos X="21" Y="18"/>
+        <UsageCount Value="14"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="format_tms32.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="43" Y="5"/>
+        <UsageCount Value="14"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="eeg_filter.pas"/>
+        <TopLine Value="7"/>
+        <CursorPos Y="9"/>
+        <UsageCount Value="14"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value=""/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="ave_form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AverageForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="32"/>
+        <CursorPos X="72" Y="32"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="ave_form.lrs"/>
+        <TopLine Value="12"/>
+        <CursorPos Y="36"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="filter_form.lfm"/>
+        <CursorPos X="42" Y="2"/>
+        <UsageCount Value="21"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="filter_form.pas"/>
+        <ComponentName Value="FilterForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="64"/>
+        <CursorPos X="6" Y="80"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="filter_form.lrs"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="33"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="filter_rbj.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="45" Y="13"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="about_form.pas"/>
+        <ComponentName Value="AboutForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="22"/>
+        <CursorPos Y="33"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="about_form.lrs"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="47"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="format_vhdr.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="13"/>
+        <CursorPos X="16" Y="24"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="tool_sound.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="10"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="util_vmrk.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="49"/>
+        <CursorPos X="29" Y="60"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="format_vmrk.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="3"/>
+        <CursorPos X="46" Y="3"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="..\lazarus\lcl\include\menuitem.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1169"/>
+        <CursorPos Y="1186"/>
+        <UsageCount Value="11"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="trigger_form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Trigger2EventsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="22"/>
+        <CursorPos X="19" Y="41"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit28>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="920" Column="6" TopLine="893"/>
+      </Position1>
+      <Position2>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="944" Column="6" TopLine="917"/>
+      </Position2>
+      <Position3>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="211" TopLine="194"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="32" Column="72"/>
+      </Position4>
+      <Position5>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="181" TopLine="164"/>
+      </Position5>
+      <Position6>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="169" Column="23" TopLine="165"/>
+      </Position6>
+      <Position7>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="179" Column="7" TopLine="164"/>
+      </Position7>
+      <Position8>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="1230" Column="42" TopLine="1210"/>
+      </Position8>
+      <Position9>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="156" Column="36" TopLine="140"/>
+      </Position9>
+      <Position10>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="1230" Column="42" TopLine="1202"/>
+      </Position10>
+      <Position11>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="156" Column="36" TopLine="141"/>
+      </Position11>
+      <Position12>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="157" Column="36" TopLine="142"/>
+      </Position12>
+      <Position13>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="158" Column="36" TopLine="143"/>
+      </Position13>
+      <Position14>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="159" Column="36" TopLine="144"/>
+      </Position14>
+      <Position15>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="160" Column="36" TopLine="145"/>
+      </Position15>
+      <Position16>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="161" Column="36" TopLine="146"/>
+      </Position16>
+      <Position17>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="162" Column="36" TopLine="147"/>
+      </Position17>
+      <Position18>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="163" Column="36" TopLine="148"/>
+      </Position18>
+      <Position19>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="162" Column="36" TopLine="147"/>
+      </Position19>
+      <Position20>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="161" Column="36" TopLine="146"/>
+      </Position20>
+      <Position21>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="160" Column="36" TopLine="145"/>
+      </Position21>
+      <Position22>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="95" Column="35" TopLine="79"/>
+      </Position22>
+      <Position23>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="96" Column="35" TopLine="80"/>
+      </Position23>
+      <Position24>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="97" Column="35" TopLine="81"/>
+      </Position24>
+      <Position25>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="98" Column="35" TopLine="82"/>
+      </Position25>
+      <Position26>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="99" Column="35" TopLine="83"/>
+      </Position26>
+      <Position27>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="100" Column="35" TopLine="84"/>
+      </Position27>
+      <Position28>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="101" Column="35" TopLine="85"/>
+      </Position28>
+      <Position29>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="86" Column="5" TopLine="69"/>
+      </Position29>
+      <Position30>
+        <Filename Value="eegmain.pas"/>
+        <Caret Line="83" Column="7" TopLine="79"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <OtherUnitFiles Value="units"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <DebugInfoType Value="dsDwarf2Set"/>
+        <UseLineInfoUnit Value="False"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

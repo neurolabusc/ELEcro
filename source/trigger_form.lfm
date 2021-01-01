@@ -1,0 +1,111 @@
+object Trigger2EventsForm: TTrigger2EventsForm
+  Left = 656
+  Height = 194
+  Top = 208
+  Width = 320
+  BorderStyle = bsDialog
+  Caption = 'Trigger2EventsForm'
+  ClientHeight = 194
+  ClientWidth = 320
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 20
+    Width = 49
+    Caption = 'Channel'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 16
+    Top = 84
+    Width = 162
+    Caption = 'Pulse width threshold (ms)'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 8
+    Height = 16
+    Top = 52
+    Width = 61
+    Caption = 'Threshold'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 16
+    Top = 116
+    Width = 128
+    Caption = 'Ignore start/end (ms)'
+    ParentColor = False
+  end
+  object AvePulseTimeEdit: TSpinEdit
+    Left = 180
+    Height = 20
+    Hint = 'Defines condition based on trigger duration. If condition 1 and 2 are defined by 10 and 20 second pulses, set this to 10'
+    Top = 80
+    Width = 121
+    MaxValue = 1000
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    Value = 10
+  end
+  object AveTriggerChannelEdit: TSpinEdit
+    Left = 180
+    Height = 20
+    Hint = 'Events will be detected when this channel crosses the threshold'
+    Top = 16
+    Width = 121
+    MaxValue = 65535
+    MinValue = 1
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    Value = 4
+  end
+  object AveThreshEdit: TSpinEdit
+    Left = 180
+    Height = 20
+    Hint = 'Events detected when this threshold is crossed'
+    Top = 48
+    Width = 121
+    MaxValue = 65535
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    Value = 4
+  end
+  object OKBtn: TButton
+    Left = 216
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'OK'
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object CancelBtn: TButton
+    Left = 112
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object AveIgnoreEdit: TSpinEdit
+    Left = 180
+    Height = 20
+    Hint = 'Temporal filters bias initial and final samples'
+    Top = 112
+    Width = 121
+    MaxValue = 65535
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    Value = 500
+  end
+end

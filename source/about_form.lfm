@@ -1,0 +1,53 @@
+object AboutForm: TAboutForm
+  Left = 376
+  Height = 98
+  Top = 169
+  Width = 175
+  BorderStyle = bsDialog
+  Caption = 'About...'
+  ClientHeight = 98
+  ClientWidth = 175
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Label2: TLabel
+    Left = 8
+    Height = 13
+    Top = 40
+    Width = 68
+    Caption = 'Chris Rorden'
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label2Click
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 13
+    Top = 64
+    Width = 36
+    Caption = '5/2010'
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 33
+    Top = 0
+    Width = 175
+    Align = alTop
+    Alignment = taLeftJustify
+    Caption = ' ELEcro'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMoneyGreen
+    Font.Height = -19
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+end

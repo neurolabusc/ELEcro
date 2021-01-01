@@ -1,0 +1,320 @@
+object MainForm: TMainForm
+  Left = 436
+  Height = 372
+  Top = 154
+  Width = 1024
+  Caption = 'MainForm'
+  ClientHeight = 372
+  ClientWidth = 1024
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnMouseWheel = ScrollBoxMouseWheel
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object TimePanel: TImage
+    Left = 0
+    Height = 25
+    Top = 16
+    Width = 1024
+    Align = alTop
+  end
+  object TimeScrollBar: TScrollBar
+    Left = 0
+    Height = 16
+    Top = 0
+    Width = 1024
+    Align = alTop
+    PageSize = 0
+    TabOrder = 0
+    OnChange = TimeScrollBarChange
+    OnKeyDown = FormKeyDown
+  end
+  object ScrollBox: TScrollBox
+    Left = 0
+    Height = 331
+    Top = 41
+    Width = 1024
+    HorzScrollBar.Page = 1009
+    VertScrollBar.Page = 316
+    Align = alClient
+    BorderStyle = bsNone
+    ClientHeight = 316
+    ClientWidth = 1009
+    TabOrder = 1
+    OnMouseWheel = ScrollBoxMouseWheel
+    OnResize = ScrollBoxResize
+    object TimeDisplayPanel: TImage
+      Left = 0
+      Height = 477
+      Top = 0
+      Width = 1030
+      OnMouseDown = TimeDisplayPanelMouseDown
+      OnMouseMove = TimeDisplayPanelMouseMove
+      OnMouseWheel = TimeDisplayPanelMouseWheel
+      OnResize = TimeDisplayPanelResize
+    end
+    object TimeDisplayPanelBackBuffer: TImage
+      Left = 0
+      Height = 140
+      Top = 0
+      Width = 1030
+      OnMouseDown = TimeDisplayPanelMouseDown
+      OnMouseMove = TimeDisplayPanelMouseMove
+      Visible = False
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 8
+    Top = 32
+    object File1: TMenuItem
+      Caption = 'File'
+      object Open1: TMenuItem
+        Caption = 'Open'
+        OnClick = Open1Click
+      end
+      object Save1: TMenuItem
+        Caption = 'Save'
+        OnClick = Save1Click
+      end
+      object Savescreenshot1: TMenuItem
+        Caption = 'Save image'
+        OnClick = Copy1Click
+      end
+      object Exportastabfile1: TMenuItem
+        Caption = 'Export'
+        OnClick = Exportastabfile1Click
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+    object Edit1: TMenuItem
+      Caption = 'Edit'
+      object Copy1: TMenuItem
+        Caption = 'Copy'
+        OnClick = Copy1Click
+      end
+    end
+    object View1: TMenuItem
+      Caption = 'View'
+      object Verticalscale1: TMenuItem
+        Caption = 'Vertical scale'
+        object Zoomin1: TMenuItem
+          Caption = 'Zoom in'
+          ShortCut = 16470
+          OnClick = Zoomin1Click
+        end
+        object Zoomout1: TMenuItem
+          Caption = 'Zoom out'
+          ShortCut = 49238
+          OnClick = Zoomout1Click
+        end
+        object Custom1: TMenuItem
+          Caption = 'Custom...'
+          OnClick = Custom1Click
+        end
+        object Showscale1: TMenuItem
+          AutoCheck = True
+          Caption = 'Show scale'
+          OnClick = Showscale1Click
+        end
+      end
+      object Horizontalscale1: TMenuItem
+        Caption = 'Horizontal scale'
+        object ZoominH: TMenuItem
+          Caption = 'Zoom in'
+          ShortCut = 16456
+          OnClick = ZoominHClick
+        end
+        object ZoomoutH: TMenuItem
+          Caption = 'Zoom out'
+          ShortCut = 49224
+          OnClick = ZoomoutHClick
+        end
+      end
+      object Channelspacing1: TMenuItem
+        Caption = 'Channel spacing'
+        object Auto1: TMenuItem
+          AutoCheck = True
+          Caption = 'Auto'
+          Checked = True
+          GroupIndex = 128
+          RadioItem = True
+          OnClick = ChannelSpacingClick
+        end
+        object Small1: TMenuItem
+          Tag = 64
+          AutoCheck = True
+          Caption = 'Small'
+          GroupIndex = 128
+          RadioItem = True
+          OnClick = ChannelSpacingClick
+        end
+        object Medium1: TMenuItem
+          Tag = 128
+          AutoCheck = True
+          Caption = 'Medium'
+          GroupIndex = 128
+          RadioItem = True
+          OnClick = ChannelSpacingClick
+        end
+        object Large1: TMenuItem
+          Tag = 256
+          AutoCheck = True
+          Caption = 'Large'
+          GroupIndex = 128
+          RadioItem = True
+          OnClick = ChannelSpacingClick
+        end
+      end
+      object Color1: TMenuItem
+        Caption = 'Color'
+        object Background1: TMenuItem
+          Caption = 'Background'
+          OnClick = Zero1Click
+        end
+        object ext1: TMenuItem
+          Tag = 1
+          Caption = 'Text'
+          OnClick = Zero1Click
+        end
+        object race1: TMenuItem
+          Tag = 2
+          Caption = 'Trace'
+          OnClick = Zero1Click
+        end
+        object Zero1: TMenuItem
+          Tag = 3
+          Caption = 'Zero'
+          OnClick = Zero1Click
+        end
+      end
+      object Hidedigital1: TMenuItem
+        AutoCheck = True
+        Caption = 'Hide digital channels'
+        OnClick = Hidedigital1Click
+      end
+    end
+    object Filter1: TMenuItem
+      Caption = 'Filter'
+      object Lowpass1: TMenuItem
+        Caption = 'Low pass'
+        OnClick = BWFilter
+      end
+      object Highpass1: TMenuItem
+        Tag = 1
+        Caption = 'Filter...'
+        OnClick = FilterERP
+      end
+      object Contaminatewithsignwave1: TMenuItem
+        Caption = 'Add sine wave'
+        OnClick = Contaminatewithsignwave1Click
+      end
+      object Generatesinewaves1: TMenuItem
+        Caption = 'Generate sine waves'
+        OnClick = Generatesinewaves1Click
+      end
+      object Average1: TMenuItem
+        Caption = 'Average'
+        OnClick = Average1Click
+      end
+      object Sound1: TMenuItem
+        AutoCheck = True
+        Caption = 'Audio'
+        OnClick = Sound1Click
+      end
+    end
+    object Events1: TMenuItem
+      Caption = 'Events'
+      object Createeventfile1: TMenuItem
+        Caption = 'New'
+        Hint = 'Detect condition triggers embedded in channel'
+        OnClick = Createeventfile1Click
+      end
+      object Merge1: TMenuItem
+        Caption = 'Merge'
+        Hint = 'Merge two event files'
+        OnClick = Merge1Click
+      end
+      object Collapseconditions1: TMenuItem
+        Caption = 'Collapse conditions'
+        OnClick = Collapseconditions1Click
+      end
+      object Open2: TMenuItem
+        Caption = 'Open'
+        OnClick = Open2Click
+      end
+      object SaveEvents: TMenuItem
+        Caption = 'Save'
+        OnClick = SaveEventsClick
+      end
+    end
+    object Help1: TMenuItem
+      Caption = 'Help'
+      object About1: TMenuItem
+        Caption = 'About'
+        OnClick = About1Click
+      end
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Filter = 'TMS32, EDF,BrainVision|*.S00;*.EDF;*.VHDR;*.s00;*.edf;*.vhdr'
+    Left = 40
+    Top = 32
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    Left = 80
+    Top = 32
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.bmp'
+    Filter = 'Bitmap|*.bmp'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 120
+    Top = 33
+  end
+  object SaveDialog2: TSaveDialog
+    DefaultExt = '.vhdr'
+    Filter = 'BrainVision|*.vhdr|EDF|*.edf|TMS32|*.S00'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 168
+    Top = 32
+  end
+  object SaveDialog3: TSaveDialog
+    DefaultExt = '.tab'
+    Filter = 'Tabbed text|*.tab'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 224
+    Top = 32
+  end
+end

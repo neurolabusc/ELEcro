@@ -1,0 +1,136 @@
+object FilterForm: TFilterForm
+  Left = 626
+  Height = 295
+  Top = 174
+  Width = 303
+  BorderStyle = bsDialog
+  Caption = 'Filter'
+  ClientHeight = 295
+  ClientWidth = 303
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 13
+    Top = 103
+    Width = 9
+    Caption = 'Q'
+    ParentColor = False
+  end
+  object GainLabel: TLabel
+    Left = 24
+    Height = 13
+    Top = 143
+    Width = 41
+    Caption = 'Gain dB'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 13
+    Top = 63
+    Width = 14
+    Caption = 'Hz'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 13
+    Top = 24
+    Width = 26
+    Caption = 'Type'
+    ParentColor = False
+  end
+  object OKbtn: TButton
+    Left = 216
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'OK'
+    ModalResult = 1
+    OnClick = OKbtnClick
+    TabOrder = 0
+  end
+  object CancelBtn: TButton
+    Left = 112
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object DefBtn: TButton
+    Left = 8
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Defaults'
+    OnClick = DefBtnClick
+    TabOrder = 2
+  end
+  object FiltQIsBandWidthCheck: TCheckBox
+    Left = 24
+    Height = 18
+    Top = 176
+    Width = 105
+    Caption = 'Q is bandwidth'
+    TabOrder = 3
+  end
+  object FiltTypeDrop: TComboBox
+    Left = 80
+    Height = 20
+    Top = 16
+    Width = 185
+    DropDownCount = 9
+    ItemHeight = 26
+    ItemIndex = 0
+    Items.Strings = (
+      'Low Pass'
+      'High Pass'
+      'Band Pass CSG'
+      'Band Pass CZPG'
+      'Notch'
+      'All Pass'
+      'Peaking'
+      'Low Shelf'
+      'High Shelf'
+    )
+    OnChange = FiltTypeDropChange
+    Style = csDropDownList
+    TabOrder = 4
+    Text = 'Low Pass'
+  end
+  object FiltHzEdit: TEdit
+    Left = 80
+    Height = 19
+    Top = 56
+    Width = 185
+    TabOrder = 5
+  end
+  object FiltDBGainEdit: TEdit
+    Left = 80
+    Height = 19
+    Top = 136
+    Width = 185
+    TabOrder = 6
+  end
+  object FiltQEdit: TEdit
+    Left = 80
+    Height = 19
+    Top = 96
+    Width = 185
+    TabOrder = 7
+  end
+  object FiltBidirectionalCheck: TCheckBox
+    Left = 24
+    Height = 18
+    Top = 216
+    Width = 188
+    Caption = 'Filter both forward and reverse'
+    TabOrder = 8
+  end
+end
