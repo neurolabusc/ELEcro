@@ -43,8 +43,8 @@
       <Unit0>
         <Filename Value="ELEcro.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos Y="20"/>
-        <UsageCount Value="37"/>
+        <CursorPos Y="9"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit0>
@@ -55,10 +55,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="EEGMain"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="1229"/>
-        <CursorPos X="5" Y="1234"/>
-        <UsageCount Value="21"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1222"/>
+        <CursorPos X="35" Y="1236"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -107,17 +108,18 @@
       </Unit8>
       <Unit9>
         <Filename Value="Prefs.pas"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="20"/>
-        <CursorPos X="129" Y="23"/>
-        <UsageCount Value="14"/>
+        <CursorPos X="31" Y="54"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="userdir.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="15"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="30"/>
       </Unit10>
       <Unit11>
         <Filename Value="format_all.pas"/>
@@ -147,12 +149,11 @@
         <ComponentName Value="AverageForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="32"/>
-        <CursorPos X="72" Y="32"/>
-        <UsageCount Value="21"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="12"/>
+        <CursorPos X="7" Y="34"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit15>
       <Unit16>
         <Filename Value="ave_form.lrs"/>
@@ -171,12 +172,10 @@
         <ComponentName Value="FilterForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="64"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="63"/>
         <CursorPos X="6" Y="80"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit18>
       <Unit19>
         <Filename Value="filter_form.lrs"/>
@@ -196,12 +195,10 @@
         <ComponentName Value="AboutForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="9"/>
-        <TopLine Value="22"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
         <CursorPos Y="33"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit21>
       <Unit22>
         <Filename Value="about_form.lrs"/>
@@ -211,34 +208,32 @@
       </Unit22>
       <Unit23>
         <Filename Value="format_vhdr.pas"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="16" Y="24"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit23>
       <Unit24>
         <Filename Value="tool_sound.pas"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos Y="14"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit24>
       <Unit25>
         <Filename Value="util_vmrk.pas"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="49"/>
         <CursorPos X="29" Y="60"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
       </Unit25>
       <Unit26>
         <Filename Value="format_vmrk.pas"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="3"/>
         <CursorPos X="46" Y="3"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
       </Unit26>
       <Unit27>
@@ -254,135 +249,131 @@
         <ComponentName Value="Trigger2EventsForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="22"/>
-        <CursorPos X="19" Y="41"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="55" Y="52"/>
+        <UsageCount Value="23"/>
       </Unit28>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="920" Column="6" TopLine="893"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="48" Column="17" TopLine="41"/>
       </Position1>
       <Position2>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="944" Column="6" TopLine="917"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="49" Column="17" TopLine="42"/>
       </Position2>
       <Position3>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="211" TopLine="194"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="48" Column="17" TopLine="41"/>
       </Position3>
       <Position4>
         <Filename Value="ave_form.pas"/>
-        <Caret Line="32" Column="72"/>
+        <Caret Line="49" Column="17" TopLine="42"/>
       </Position4>
       <Position5>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="181" TopLine="164"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="48" Column="17" TopLine="41"/>
       </Position5>
       <Position6>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="169" Column="23" TopLine="165"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="49" Column="17" TopLine="42"/>
       </Position6>
       <Position7>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="179" Column="7" TopLine="164"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="50" Column="17" TopLine="43"/>
       </Position7>
       <Position8>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="1230" Column="42" TopLine="1210"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="49" Column="17" TopLine="42"/>
       </Position8>
       <Position9>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="156" Column="36" TopLine="140"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="48" Column="17" TopLine="41"/>
       </Position9>
       <Position10>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="1230" Column="42" TopLine="1202"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="47" Column="17" TopLine="40"/>
       </Position10>
       <Position11>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="156" Column="36" TopLine="141"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="46" Column="17" TopLine="39"/>
       </Position11>
       <Position12>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="157" Column="36" TopLine="142"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="62" Column="27" TopLine="38"/>
       </Position12>
       <Position13>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="158" Column="36" TopLine="143"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="64" Column="35" TopLine="39"/>
       </Position13>
       <Position14>
-        <Filename Value="eegmain.pas"/>
-        <Caret Line="159" Column="36" TopLine="144"/>
+        <Filename Value="ave_form.pas"/>
+        <Caret Line="34" Column="7" TopLine="12"/>
       </Position14>
       <Position15>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="160" Column="36" TopLine="145"/>
+        <Caret Line="1219" Column="16" TopLine="1202"/>
       </Position15>
       <Position16>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="161" Column="36" TopLine="146"/>
+        <Caret Line="1226" Column="18" TopLine="1203"/>
       </Position16>
       <Position17>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="162" Column="36" TopLine="147"/>
+        <Caret Line="42" Column="30" TopLine="36"/>
       </Position17>
       <Position18>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="163" Column="36" TopLine="148"/>
+        <Caret Line="163" Column="38" TopLine="155"/>
       </Position18>
       <Position19>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="162" Column="36" TopLine="147"/>
+        <Caret Line="195" Column="43" TopLine="187"/>
       </Position19>
       <Position20>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="161" Column="36" TopLine="146"/>
+        <Caret Line="817" Column="21" TopLine="784"/>
       </Position20>
       <Position21>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="160" Column="36" TopLine="145"/>
+        <Caret Column="4"/>
       </Position21>
       <Position22>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="95" Column="35" TopLine="79"/>
+        <Caret Line="1238" Column="17" TopLine="1217"/>
       </Position22>
       <Position23>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="96" Column="35" TopLine="80"/>
+        <Caret Line="1236" Column="21" TopLine="1219"/>
       </Position23>
       <Position24>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="97" Column="35" TopLine="81"/>
+        <Caret Line="1238" Column="16" TopLine="1224"/>
       </Position24>
       <Position25>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="98" Column="35" TopLine="82"/>
+        <Caret Line="1239" Column="2" TopLine="1216"/>
       </Position25>
       <Position26>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="99" Column="35" TopLine="83"/>
+        <Caret Line="511" Column="13" TopLine="508"/>
       </Position26>
       <Position27>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="100" Column="35" TopLine="84"/>
+        <Caret Line="3" Column="80"/>
       </Position27>
       <Position28>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="101" Column="35" TopLine="85"/>
+        <Caret Line="128" Column="23" TopLine="100"/>
       </Position28>
       <Position29>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="86" Column="5" TopLine="69"/>
+        <Caret Line="214" Column="15" TopLine="186"/>
       </Position29>
       <Position30>
         <Filename Value="eegmain.pas"/>
-        <Caret Line="83" Column="7" TopLine="79"/>
+        <Caret Line="473" Column="53" TopLine="455"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -399,9 +390,7 @@
     </Parsing>
     <Linking>
       <Debugging>
-        <GenerateDebugInfo Value="False"/>
         <DebugInfoType Value="dsDwarf2Set"/>
-        <UseLineInfoUnit Value="False"/>
       </Debugging>
       <LinkSmart Value="True"/>
       <Options>

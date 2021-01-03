@@ -10,7 +10,8 @@ uses
 {$IFDEF Win32}
   Windows, ShellAPI, Messages,
 {$ELSE}
-  LMessages, LCLType,
+  //LMessages,
+LCLType,
 {$ENDIF}
    {$IFDEF FPC}LResources, {$ENDIF}
    SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
@@ -23,6 +24,8 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    EventDesc: TEdit;
+    EventTyp: TEdit;
   Filter1: TMenuItem;
     Lowpass1: TMenuItem;
     Highpass1: TMenuItem;
@@ -34,19 +37,34 @@ type
     Events1: TMenuItem;
     Createeventfile1: TMenuItem;
     Collapseconditions1: TMenuItem;
+    OpenDialogEvents: TOpenDialog;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    EventStatus: TPanel;
+    SaveDialogEvents: TSaveDialog;
     SaveEvents: TMenuItem;
     Open2: TMenuItem;
     Merge1: TMenuItem;
-    SaveDialog3: TSaveDialog;
-    Sound1: TMenuItem;
     SaveDialogTab: TSaveDialog;
+    Sound1: TMenuItem;
+    //SaveDialogTab: TSaveDialog;
     Showscale1: TMenuItem;
     Savescreenshot1: TMenuItem;
     Save1: TMenuItem;
+    EventFirst: TSpeedButton;
+    EventPrev: TSpeedButton;
+    EventNext: TSpeedButton;
+    EventLast: TSpeedButton;
+    DeleteEvent: TSpeedButton;
+    EventOnset: TSpinEdit;
+    EventDuration: TSpinEdit;
     TimeScrollBar: TScrollBar;
     MainMenu1: TMainMenu;
     File1: TMenuItem;
     Edit1: TMenuItem;
+    EventBar: TToolBar;
     View1: TMenuItem;
     Open1: TMenuItem;
     Exit1: TMenuItem;
@@ -78,25 +96,24 @@ type
     Zero1: TMenuItem;
     SaveDialog1: TSaveDialog;
     SaveDialog2: TSaveDialog;
-    EventBar: TToolBar;
-    EventFirst: TSpeedButton;
-    EventPrev: TSpeedButton;
-    EventNext: TSpeedButton;
-    EventLast: TSpeedButton;
-    EventTyp: TEdit;
-    EventOnset: TSpinEdit;
-    EventDuration: TSpinEdit;
-    EventDesc: TEdit;
-    Panel1: TPanel;
-    Panel2: TPanel;
-    Panel3: TPanel;
-    Panel4: TPanel;
-    EventStatus: TPanel;
-    DeleteEvent: TSpeedButton;
-    SaveDialogEvents: TSaveDialog;
+    //EventBar: TToolBar;
+    //EventFirst: TSpeedButton;
+    //EventPrev: TSpeedButton;
+    //EventNext: TSpeedButton;
+    //DeleteEvent: TSpeedButton;
+    //DeleteEvent: TSpeedButton;
+    //EventTyp: TEdit;
+    //EventOnset: TSpinEdit;
+    //EventDuration: TSpinEdit;
+    //EventDesc: TEdit;
+    //Panel3: TPanel;
+    //Panel4: TPanel;
+    //EventStatus: TPanel;
+    //SaveDialogEvents: TSaveDialog;
     Quickfilter1: TMenuItem;
-    OpenDialogEvents: TOpenDialog;
+    //OpenDialogEvents: TOpenDialog;
     procedure Average1Click(Sender: TObject);
+    procedure FormDropFiles(Sender: TObject; const FileNames: array of string);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormResize(Sender: TObject);
     procedure OpenEvents (lFilename: string);
@@ -461,7 +478,6 @@ begin
   //showmessage( VMRKname+' -> '+OpenDialog.FileName);
   if (Ext = '.EEG') or (Ext='.VMRK') then begin
     OpenDialog.FileName := changefileext(OpenDialog.FileName,'.vhdr');
-
   end;
   if not Fileexists (OpenDialog.FileName) then begin
       showmessage('Unable to find '+OpenDialog.FileName);
@@ -793,28 +809,21 @@ begin
   end;
   Showscale1.Checked := gP.ShowVerticalAxis;
   Hidedigital1.Checked := gP.HideDigital;
+  //{$DEFINE DBUG}
+  {$IFDEF DBUG}
+  OpenDialog.FileName := '/Users/chrisrorden/Desktop/sampledata/20100806_122102.vhdr';
+  FileOpen;
+  {$ELSE}
+  Dummy (13,60,131);
+  {$ENDIF}
  (* //OpenDialog.FileName := 'c:\tdcs\lefthemitms.vhdr';
   //FileOpen;
  //LoadVMRK('c:\tdcs\lefthemitms.vmrk', VMRK);
  //VMRK.CurrentEvent := 0;
  *)
  //UpdateEvents;
-  Dummy (13,60,131);
   {$IFDEF FPC} Application.ShowButtonGlyphs := sbgNever; {$ENDIF}
 end;
-
-(*procedure X;
-var
-   lStr: string;
-   lDurationSamples,AvePulseTimesamples: integer;
-begin
-    lStr := '0';
-    inputquery('Enter samples','DurationSamples',lStr);
-    lDurationSamples := strtoint(lStr);
-    inputquery('Enter threshold','Enter AvePulseTimesamples',lStr);
-    AvePulseTimesamples := strtoint(lStr);
-  showmessage(inttostr(lDurationSamples)+'  '+inttostr(AvePulseTimesamples)+'  '+inttostr(Time2Cond (lDurationSamples, AvePulseTimesamples)));
-end;  *)
 
 procedure TMainForm.Custom1Click(Sender: TObject);
 var
@@ -891,7 +900,6 @@ procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word;
 var
   i: integer;
 begin
-//caption := inttostr(random(888));//problem OSX
  if (vk_Down = Key) then
     Zoomout1Click(nil);
   if (vk_Up = Key) then
@@ -912,8 +920,6 @@ begin
         TimeScrollBar.Position := TimeScrollBar.Position+i;
   end;
 end;
-
-
 
 procedure TMainForm.FormResize(Sender: TObject);
 begin
@@ -936,7 +942,6 @@ procedure TMainForm.TimeDisplayPanelMouseWheel(Sender: TObject;
   var Handled: Boolean);
 begin
     ScrollBoxMouseWheel(Sender,Shift,Wheeldelta,MousePos,Handled);
-    //Handled := true;
 end;
 
 procedure TMainForm.TimeDisplayPanelResize(Sender: TObject);
@@ -990,7 +995,6 @@ begin
   AddSineWave(EEG,lHz,lAmp);
   AutoScale;
   UpdateTimeDisplay;
-
 end;
 
 procedure TMainForm.BWFilter(Sender: TObject);
@@ -1084,7 +1088,6 @@ const
 var
   t,n: integer;
 begin
- //fx(length(VMRK.Events));
   n := length(VMRK.Events);
   if n < 1 then begin
     EventBar.visible := false;
@@ -1163,7 +1166,6 @@ begin
   if not SaveDialogEvents.Execute then
       exit;
   WriteVMRK(SaveDialogEvents.FileName, VMRK);
-
 end;
 
 procedure TMainForm.Quickfilter1Click(Sender: TObject);
@@ -1172,8 +1174,6 @@ var
   lF: TFilter;
 begin
   lS := '';
-
-
   if (gP.QZeroMean)  then begin
     FilterZeroMean (EEG);
     lS := lS+'ZeroMean' ;
@@ -1227,6 +1227,17 @@ begin
   UpdateScrollBar;
 end;
 
+procedure TMainForm.FormDropFiles(Sender: TObject;
+  const FileNames: array of string);
+var
+  fnm: string;
+begin
+ fnm := Filenames[0];
+ if not fileexists(fnm) then exit;
+ OpenDialog.FileName := fnm;
+ FileOpen;
+end;
+
 procedure TMainForm.Createeventfile1Click(Sender: TObject);
 var
   lV: TVMRK;
@@ -1247,7 +1258,6 @@ begin
     VMRK.CurrentEvent := 0;
     UpdateEvents;
 end;
-
 
 procedure TMainForm.Merge1Click(Sender: TObject);
 label 667;
@@ -1270,16 +1280,12 @@ begin
  //LoadVMRK(lFilename, VMRK);
  667:
  OpenDialogEvents.title := 'Select an events file';
-
 end;
-
 
 procedure TMainForm.About1Click(Sender: TObject);
 begin
   AboutForm.showmodal;
-  //  Showmessage('EEG reader by Chris Rorden. Michael Vinther''s EEG Analyzer http://logicnet.dk/reports/');
 end;
-
 
 procedure TMainForm.Collapseconditions1Click(Sender: TObject);
 var
@@ -1302,8 +1308,8 @@ begin
 end;
 
 procedure TMainForm.Hidedigital1Click(Sender: TObject);
-var
-  nChan,L:integer;
+//var
+//  nChan,L:integer;
 begin
   gP.HideDigital:=Hidedigital1.Checked;
   AutoScale;

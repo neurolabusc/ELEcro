@@ -7,7 +7,6 @@ uses
 
 {$R *.res}
 
-
 begin
   Application.Scaled:=True;
   Application.Initialize;

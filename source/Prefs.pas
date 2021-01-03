@@ -31,15 +31,15 @@ type
          Trace,Zero,Text,Background: TColor;
          F: TFilter;
   end;
-procedure SetDefaultPrefs (var lPrefs: TPrefs);
-procedure SetFiltDefaults (var lPrefs: TFilter);
+procedure SetDefaultPrefs (out lPrefs: TPrefs);
+procedure SetFiltDefaults (out lPrefs: TFilter);
 function IniFile(lRead: boolean; lFilename: string; var lPrefs: TPrefs): boolean;
 var
    gP: TPrefs;
 
 implementation
 
-procedure SetFiltDefaults (var lPrefs: TFilter);
+procedure SetFiltDefaults (out lPrefs: TFilter);
 begin
   with lPrefs do begin
     FiltQ := 0.3;
@@ -51,13 +51,13 @@ begin
   end;
 end;
 
-procedure SetDefaultPrefs (var lPrefs: TPrefs);
+procedure SetDefaultPrefs (out lPrefs: TPrefs);
 begin
   SetFiltDefaults(lPrefs.F);
   with lPrefs do begin
     ConditionCollapseList := '1S,1S,1S,1S,2A,2A,2A,2A,2A,2A,3S,3S,3S,3S,4A,4A,4A,4A,4A,4A,5S,5S,5S,5S,6C,6C,6C,6C,6C,6C,7S,7S,7S,7S,8C,8C,8C,8C,8C,8C';
     ButterHz := 90;
-    Trace := $aa0055;//$aa0055;//clBlue;
+    Trace := $aa0055;//clBlue;
     Zero := clGray;
     Text := $660022;
     Background := $C8FFB4;//clBlack;

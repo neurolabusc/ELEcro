@@ -13,17 +13,25 @@ uses
   Dialogs, StdCtrls, Spin,prefs,eeg_type, ave;
 
 type
+
+  { TAverageForm }
+
   TAverageForm = class(TForm)
+    AveDurationEdit: TSpinEdit;
+    AveStartEdit: TSpinEdit;
+    AveBaselineDurationEdit: TSpinEdit;
+    BaselineCheck: TCheckBox;
+    //RectifyCheck: TCheckBox;
+    Label2: TLabel;
+    Label3: TLabel;
     OKbtn: TButton;
     CancelBtn: TButton;
     RectifyCheck: TCheckBox;
     GroupBox1: TGroupBox;
-    Label2: TLabel;
-    Label3: TLabel;
-    AveStartEdit: TSpinEdit;
-    AveDurationEdit: TSpinEdit;
-    BaselineCheck: TCheckBox;
-    AveBaselineDurationEdit: TSpinEdit;
+    //AveStartEdit: TSpinEdit;
+    //AveDurationEdit: TSpinEdit;
+    //BaselineCheck: TCheckBox;
+    //AveBaselineDurationEdit: TSpinEdit;
     Label4: TLabel;
     procedure FormShow(Sender: TObject);
     procedure OKbtnClick(Sender: TObject);

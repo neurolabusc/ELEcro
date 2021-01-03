@@ -1,16 +1,18 @@
 object MainForm: TMainForm
-  Left = 436
-  Height = 372
-  Top = 154
-  Width = 1024
+  Left = 663
+  Height = 397
+  Top = 181
+  Width = 1060
+  AllowDropFiles = True
   Caption = 'MainForm'
-  ClientHeight = 372
-  ClientWidth = 1024
+  ClientHeight = 397
+  ClientWidth = 1060
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Menu = MainMenu1
   OnClose = FormClose
   OnCreate = FormCreate
+  OnDropFiles = FormDropFiles
   OnKeyDown = FormKeyDown
   OnMouseWheel = ScrollBoxMouseWheel
   OnResize = FormResize
@@ -21,14 +23,14 @@ object MainForm: TMainForm
     Left = 0
     Height = 25
     Top = 16
-    Width = 1024
+    Width = 1060
     Align = alTop
   end
   object TimeScrollBar: TScrollBar
     Left = 0
     Height = 16
     Top = 0
-    Width = 1024
+    Width = 1060
     Align = alTop
     PageSize = 0
     TabOrder = 0
@@ -37,15 +39,15 @@ object MainForm: TMainForm
   end
   object ScrollBox: TScrollBox
     Left = 0
-    Height = 331
+    Height = 330
     Top = 41
-    Width = 1024
-    HorzScrollBar.Page = 1009
-    VertScrollBar.Page = 316
+    Width = 1060
+    HorzScrollBar.Page = 1030
+    VertScrollBar.Page = 330
     Align = alClient
     BorderStyle = bsNone
-    ClientHeight = 316
-    ClientWidth = 1009
+    ClientHeight = 330
+    ClientWidth = 1045
     TabOrder = 1
     OnMouseWheel = ScrollBoxMouseWheel
     OnResize = ScrollBoxResize
@@ -67,6 +69,129 @@ object MainForm: TMainForm
       OnMouseDown = TimeDisplayPanelMouseDown
       OnMouseMove = TimeDisplayPanelMouseMove
       Visible = False
+    end
+  end
+  object EventBar: TToolBar
+    Left = 0
+    Height = 26
+    Top = 371
+    Width = 1060
+    Align = alBottom
+    Caption = 'EventBar'
+    TabOrder = 2
+    object EventFirst: TSpeedButton
+      Left = 1
+      Height = 22
+      Top = 2
+      Width = 23
+      Caption = '|<'
+      OnClick = EventFirstClick
+    end
+    object EventPrev: TSpeedButton
+      Left = 24
+      Height = 22
+      Top = 2
+      Width = 23
+      Caption = '<'
+      OnClick = EventPrevClick
+    end
+    object EventNext: TSpeedButton
+      Left = 70
+      Height = 22
+      Top = 2
+      Width = 23
+      Caption = '>'
+      OnClick = EventNextClick
+    end
+    object EventLast: TSpeedButton
+      Left = 93
+      Height = 22
+      Top = 2
+      Width = 23
+      Caption = '>|'
+      OnClick = EventLastClick
+    end
+    object DeleteEvent: TSpeedButton
+      Left = 47
+      Height = 22
+      Top = 2
+      Width = 23
+      Caption = '-'
+      OnClick = DeleteEventClick
+    end
+    object Panel1: TPanel
+      Left = 116
+      Height = 22
+      Top = 2
+      Width = 80
+      BevelOuter = bvNone
+      Caption = 'Type'
+      TabOrder = 0
+    end
+    object EventTyp: TEdit
+      Left = 196
+      Height = 19
+      Top = 2
+      Width = 80
+      TabOrder = 1
+    end
+    object Panel2: TPanel
+      Left = 276
+      Height = 22
+      Top = 2
+      Width = 100
+      BevelOuter = bvNone
+      Caption = 'Desc'
+      TabOrder = 2
+    end
+    object EventDesc: TEdit
+      Left = 376
+      Height = 19
+      Top = 2
+      Width = 80
+      TabOrder = 3
+    end
+    object Panel3: TPanel
+      Left = 456
+      Height = 22
+      Top = 2
+      Width = 100
+      BevelOuter = bvNone
+      Caption = 'Onset'
+      TabOrder = 4
+    end
+    object EventOnset: TSpinEdit
+      Left = 556
+      Height = 19
+      Top = 2
+      Width = 100
+      MaxValue = 0
+      TabOrder = 5
+    end
+    object Panel4: TPanel
+      Left = 656
+      Height = 22
+      Top = 2
+      Width = 100
+      Caption = 'Duration'
+      TabOrder = 6
+    end
+    object EventDuration: TSpinEdit
+      Left = 756
+      Height = 19
+      Top = 2
+      Width = 100
+      MaxValue = 0
+      TabOrder = 7
+    end
+    object EventStatus: TPanel
+      Left = 856
+      Height = 22
+      Top = 2
+      Width = 170
+      Alignment = taLeftJustify
+      Caption = ' 0/0'
+      TabOrder = 8
     end
   end
   object MainMenu1: TMainMenu
@@ -239,7 +364,7 @@ object MainForm: TMainForm
         OnClick = Createeventfile1Click
       end
       object Merge1: TMenuItem
-        Caption = 'Merge'
+        Caption = 'Merge two event files'
         Hint = 'Merge two event files'
         OnClick = Merge1Click
       end
@@ -266,8 +391,8 @@ object MainForm: TMainForm
   end
   object OpenDialog: TOpenDialog
     Filter = 'TMS32, EDF,BrainVision|*.S00;*.EDF;*.VHDR;*.s00;*.edf;*.vhdr'
-    Left = 40
-    Top = 32
+    Left = 136
+    Top = 96
   end
   object ColorDialog1: TColorDialog
     Color = clBlack
@@ -300,21 +425,35 @@ object MainForm: TMainForm
     DefaultExt = '.bmp'
     Filter = 'Bitmap|*.bmp'
     Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
-    Left = 120
-    Top = 33
+    Left = 24
+    Top = 96
   end
   object SaveDialog2: TSaveDialog
     DefaultExt = '.vhdr'
     Filter = 'BrainVision|*.vhdr|EDF|*.edf|TMS32|*.S00'
     Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
-    Left = 168
-    Top = 32
+    Left = 24
+    Top = 152
   end
-  object SaveDialog3: TSaveDialog
+  object SaveDialogTab: TSaveDialog
     DefaultExt = '.tab'
     Filter = 'Tabbed text|*.tab'
     Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
-    Left = 224
-    Top = 32
+    Left = 24
+    Top = 208
+  end
+  object OpenDialogEvents: TOpenDialog
+    Title = 'Select an events file'
+    DefaultExt = '.*.VMRK'
+    Filter = 'BV VMark File|*.VMRK'
+    Left = 136
+    Top = 152
+  end
+  object SaveDialogEvents: TSaveDialog
+    DefaultExt = '.*.vmrk'
+    Filter = 'BrainVision Mark|*.vmrk'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 24
+    Top = 272
   end
 end
